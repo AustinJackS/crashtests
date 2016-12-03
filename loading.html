@@ -1,5 +1,15 @@
 <html>
-<body>
-<img src="ajax-loader.gif"></img>
+  <script>
+    window.addEventListener("beforeunload", function (e) {
+    var confirmationMessage = 'It looks like you have been loading something. '
+                            + 'If you leave before saving, your changes will be lost.';
+
+    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+});
+  </script>
+  <body><h1>Please let this page load></h1>
+    <br>
+<img src="ajax-loader.gif">
 </body>
 </html>
