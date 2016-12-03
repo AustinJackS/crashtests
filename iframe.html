@@ -2,9 +2,7 @@
 <body>
 <iframe src="about:blank" id="1"></iframe>
   <script>
-    while (1==1) {
-      document.getElementById("1").src="about:blank";
-    }
+    setInterval(function(){ document.getElementById("1").src="about:blank" }, 5);
   </script>
 </body>
 </html>
