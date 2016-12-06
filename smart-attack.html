@@ -3,6 +3,7 @@
 <h1>Launch a dynamic attack against your browser attempting to cause a DoS</h1>
   <script>
     //check if poups are allowed
+    var url = 'https://google.com';
     var newWin = window.open(url);             
     var popup=true;
   if(!newWin || newWin.closed || typeof newWin.closed=='undefined') 
