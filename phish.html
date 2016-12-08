@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+  <iframe src="https://austinjacks.github.io" id="1"></iframe>
 <a id="myAnchor" href="http://w3schools.com/">Go to W3Schools.com</a>
 
 <p>The preventDefault() method will prevent the link above from following the URL.</p>
@@ -10,7 +10,7 @@
 document.getElementById("myAnchor").addEventListener("click", function(event){
   event.preventDefault();
   event.stopPropagation();
-  var elem = document.body;
+  var elem = document.getElementById("1");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 } else if (elem.msRequestFullscreen) {
