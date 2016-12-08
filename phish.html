@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <iframe src="secret.html" id="1"></iframe>
+  <iframe src="secret.html" id="1" style="display: none"></iframe>
 <a id="myAnchor" href="https://google.com">Totally legit google link.</a>
 
 <p>The preventDefault() method will prevent the link above from following the URL.</p>
@@ -11,6 +11,7 @@ document.getElementById("myAnchor").addEventListener("click", function(event){
   event.preventDefault();
   event.stopPropagation();
   var elem = document.getElementById("1");
+  elem.style.display = 'block';
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 } else if (elem.msRequestFullscreen) {
