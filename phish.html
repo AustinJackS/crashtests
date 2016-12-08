@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<a id="myAnchor" href="http://w3schools.com/">Go to W3Schools.com</a>
+
+<p>The preventDefault() method will prevent the link above from following the URL.</p>
+
+<script>
+document.getElementById("myAnchor").addEventListener("click", function(event){
+    event.preventDefault();
+  event.stopPropagation();
+  if (elementPrototype.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (elementPrototype.webkitRequestFullScreen) {
+    document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+  } else if (elementPrototype.mozRequestFullScreen) {
+    document.documentElement.mozRequestFullScreen();
+  } else {
+    // fail silently
+  }
+});
+</script>
+
+</body>
+</html>
