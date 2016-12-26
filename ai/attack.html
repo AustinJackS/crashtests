@@ -40,6 +40,7 @@ Attempts to DoS your browser via exploit-kit like techniques, but using only Jav
     alert('Your OS is:'+os);
     var cont=confirm('Exploitation will now begin, if you continue, your browser will probably crash.');
     if (cont==false) {
+      document.write('Aborted.');
       throw new Error('This is not an error. This is just to abort javascript');
     }
     alert('To be continued!');
