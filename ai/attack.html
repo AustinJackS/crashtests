@@ -42,6 +42,9 @@ Attempts to DoS your browser via exploit-kit like techniques, but using only Jav
     if (navigator.platform == 'Mac OS' || navigator.platform == 'MacOS') {
       os="MacOS";
     }
+    if (navigator.platform[0]='i') {
+      os="iDevice";
+    }
     alert('OS identification done!');
     alert('Your OS is:'+os);
     var cont=confirm('Exploitation will now begin, if you continue, your browser will probably crash.');
